@@ -1,0 +1,17 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    service-url:
+      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://rajuankilla:Test1234$@cluster0.nq4tzic.mongodb.net/?retryWrites=true&w=majority # mongodb://localhost:27017/orderdb
+      host: atlas-cluster0.nq4tzic.mongodb.net
+      port: 27017
+      database: orderdb
+      repositories:
+        enabled: true
