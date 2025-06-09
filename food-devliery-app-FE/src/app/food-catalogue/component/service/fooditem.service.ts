@@ -1,14 +1,18 @@
 import { Injectable } from "@angular/core"; 
 import { HttpClient } from "@angular/common/http";
 import { catchError, Observable, throwError } from "rxjs";
-import { API_URL_FC, API_URL_RL } from "../../../constants/url";
+// import { API_URL_FC, API_URL_RL } from "../../../constants/url";
+import { K8ExternalIp } from "../../../constants/url";
 
 @Injectable({
     providedIn: 'root'
 })
 export class FoodItemService {
 
-    private apiUrl = API_URL_FC+'/foodCatalogue/fetchRestaurantAndFoodItemsById/';
+    // private apiUrl = API_URL_FC+'/foodCatalogue/fetchRestaurantAndFoodItemsById/';
+    // Un commnet when running in local
+
+     private apiUrl = K8ExternalIp+'/foodCatalogue/fetchRestaurantAndFoodItemsById/';
 
     constructor(private http: HttpClient){
 
